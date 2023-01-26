@@ -33,7 +33,7 @@ class Predictor(BasePredictor):
         self,
         # pretrained_model: str = Input(
         #     description="Model identifier from huggingface.co/models",
-        #     default="runwayml/stable-diffusion-v1-5",
+        #     default="dreamlike-art/dreamlike-photoreal-2.0",
         # ),
         # huggingface_token: str = Input(
         #     description="Provide your huggingface token to download the models.",
@@ -232,9 +232,9 @@ class Predictor(BasePredictor):
 
         # some settings are fixed for the replicate model
         args = {
-            "pretrained_model_name_or_path": "runwayml/stable-diffusion-v1-5",
+            "pretrained_model_name_or_path": "dreamlike-art/dreamlike-photoreal-2.0",
             "pretrained_vae_name_or_path": "stabilityai/sd-vae-ft-mse",
-            "revision": "fp16",
+            "revision": None,
             "tokenizer_name": None,
             "instance_data_dir": cog_instance_data,
             "class_data_dir": cog_class_data,
